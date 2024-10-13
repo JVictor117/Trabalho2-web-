@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado</title>
+</head>
+<body>
+    <h1>Recebido</h1>  
+    <p><strong>Nome:</strong> <span id="displayName">Não fornecido</span></p>
+    <p><strong>Email:</strong> <span id="displayEmail">Não fornecido</span></p>
+    <p><strong>Gênero:</strong> <span id="displayGenero">Não fornecido</span></p>
+    <p><strong>Estado:</strong> <span id="displayEstado">Não fornecido</span></p>
+    <p><strong>Preferências de Filmes:</strong> <span id="displayFilmes">Nenhuma selecionada</span></p>
+    <p><strong>Mensagem:</strong> <span id="displayMessage">Não fornecido</span></p>
+
+    <script>
+        
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const data = {};
+            for (const [key, value] of params.entries()) {
+                data[key] = value;
+            }
+            return data;
+        }
+        
+        function exibirDados() {
+            const params = getQueryParams();
+
+            
+            document.getElementById('displayName').textContent = params.Nome || 'Não fornecido';
+            document.getElementById('displayEmail').textContent = params.Email || 'Não fornecido';
+           
+            document.getElementById('displayGenero').textContent = params.genero || 'Não fornecido';
+           
+            document.getElementById('displayEstado').textContent = params.estado || 'Não fornecido';
+           
+            let filmes = [];
+            if (params.filme1) filmes.push(params.filme1);
+            if (params.filme2) filmes.push(params.filme2);
+            if (params.filme3) filmes.push(params.filme3);
+            if (params.filme4) filmes.push(params.filme4);
+            if (params.filme5) filmes.push(params.filme5);
+            if (params.filme6) filmes.push(params.filme6);
+            if (params.filme7) filmes.push(params.filme7);
+
+            document.getElementById('displayFilmes').textContent = filmes.length ? filmes.join(', ') : 'Nenhuma selecionada';
+            
+            document.getElementById('displayMessage').textContent = params.message || 'Não fornecido';
+        }
+        
+        exibirDados();
+    </script>
+     
+          
+</body>
+</html>

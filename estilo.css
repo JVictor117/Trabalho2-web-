@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+
+
+fieldset{
+    background-color: rgba(255, 255, 255, 0.5);;
+    margin-bottom: 8px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 10%;  
+    border-radius: 30px;  
+    
+}
+
+#check{
+    display: inline-block;
+}

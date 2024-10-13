@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form action="teste2.html" method="get">
+        <fieldset id="Grupo">
+        <div class="cabeçalho">
+          <h1 id="cima">Formulário</h1>
+        </div>
+          <br><br>  
+          <label>Nome:</label>
+          <input type="text" name="Nome" id="Nome" required>
+          <br><br>
+          <label>Email:</label>
+          <input type="email" name="Email" id="Email" required>
+          <br><br>
+          <label>Senha</label>
+          <input id="password" type="password" required>
+          <br><br> 
+          <label> Qual Seu Gênero? </label>
+          <label>
+          <input type="radio" name="genero" value="Masculino"> Masculino
+          </label> 
+          <label>
+            <input type="radio" name="genero" value="Feminino"> Feminino
+          </label>
+          <br><br>          
+          <label>Estado</label>
+          <select id="estado" name="estado"> 
+          <option>Espírito Santo</option>
+          <option>Minas Gerais</option>
+          <option>Rio de Janeiro</option>
+          <option>São Paulo</option>          
+          </select>
+          <br><br>
+          <label>Selecione os tipos de filmes que gosta</label>
+          <br><br>
+          <div id="check">         
+          <input type="checkbox" id="filme1" name="filme1" value="Ação">
+          <label for="filme1">Ação</label>
+          <input type="checkbox" id="filme2" name="filme2"  value="Aventura">
+          <label for="filme2">Aventura</label>
+          <input type="checkbox" id="filme3" name="filme3" value="Drama">
+          <label for="filme3">Drama</label>
+          <input type="checkbox" id="filme4" name="filme4" value="Terror">
+          <label for="filme4">Terror</label>
+          <input type="checkbox" id="filme5" name="filme5" value="Comédia">
+          <label for="filme5">Comédia</label>
+          <input type="checkbox" id="filme6" name="filme6" value="Romance">
+          <label for="filme6">Romance</label>
+          <input type="checkbox" id="filme7" name="filme7" value="Infantil">
+          <label for="filme7">Infantil</label>
+          </div> 
+          <br><br>
+          <label for="message">Mensagem:</label>
+          <br>
+          <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+          <br><br>
+          <br><br>
+          <button type="submit">Enviar</button>
+        </fieldset>        
+    </form>
+</body>
+</html>
